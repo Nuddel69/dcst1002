@@ -1,8 +1,8 @@
-import Sidebar from 'src/components/Sidebar.tsx';
-import TextContent from 'src/components/TextContent.tsx';
-import ImageContent from 'src/components/ImageContent.tsx';
-import VideoContent from 'src/components/VideoContent.tsx';
-import Quiz from 'src/components/Quiz.tsx';
+import Sidebar from './components/Sidebar.tsx';
+import TextContent from './components/TextContent.tsx';
+import ImageContent from './components/ImageContent.tsx';
+import VideoContent from './components/VideoContent.tsx';
+import Quiz from './components/Quiz.tsx';
 
 function App() {
   const sidebarItems = [
