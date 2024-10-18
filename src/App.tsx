@@ -50,12 +50,10 @@ function App() {
           src="https://unsplash.it/400/200"
           alt="Placeholder Image"
         />
-        <TextContent></TextContent>
           <VideoContent
           title="Opplæringsvideo"
           videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your video URL
         />
-        <TextContent></TextContent>
         <Quiz question={quizQuestion} options={quizOptions} />
       </div>
     </div>
