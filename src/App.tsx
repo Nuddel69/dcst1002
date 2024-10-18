@@ -1,4 +1,4 @@
-import Sidebar from 'components/Sidebar.tsx';
+import Sidebar from './components/sidebar.tsx';
 import TextContent from './components/TextContent.tsx';
 import ImageContent from './components/ImageContent.tsx';
 import VideoContent from './components/VideoContent.tsx';
