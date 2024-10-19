@@ -1,3 +1,5 @@
+
+// src/components/Sidebar.tsx
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -13,10 +15,11 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
       className="menu is-fixed-left"
       style={{
         width: '250px',
-        height: '100vh',
+        minHeight: '100vh', // Ensure it fills the height of the viewport
         paddingTop: '20px',
         backgroundColor: '#f5f5f5', // Light background color
-        // borderRight: '1px solid #dbdbdb', // Border for separation
+        // Optional: add some box shadow for better separation
+        // boxShadow: '2px 0 5px rgba(0, 0, 0, 0.1)', 
       }}
     >
       <p className="menu-label">Kapitler</p>
