@@ -2,6 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import Navbar from './components/Navbar.tsx'
+
 import Layout from './components/Layout.tsx'
 import Home from './pages/Home.tsx'
 import Hensikter from './pages/Hensikter.tsx'
@@ -42,6 +44,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <Navbar />
     <RouterProvider router={router} />
   </StrictMode>
 );
