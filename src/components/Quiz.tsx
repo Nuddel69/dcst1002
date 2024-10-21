@@ -27,7 +27,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
         setExplanation(null);
       } else {
         setResult('Feil!');
-        setExplanation(chosenOption?.explanation || 'Ingen forklaring oppgitt.');
+        setExplanation(chosenOption?.explanation || 'Ingen forklaring gitt.');
       }
       setIsSubmitted(true); // Mark the quiz as submitted
     }

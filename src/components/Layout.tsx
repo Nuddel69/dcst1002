@@ -1,30 +1,88 @@
+// // src/components/Layout.tsx
+// import React from 'react';
+// import Sidebar from './sidebar.tsx';
+// import Navbar from './Navbar.tsx'
+//
+// type LayoutProps = {
+//   children: React.ReactNode; // This will be the main content passed as props
+// };
+//
+// const Layout: React.FC<LayoutProps> = ({ children }) => {
+//
+//   const sidebarItems = [
+//     { title: 'Forside', link: '/' },
+//
+//     { title: 'Folk med onde hensikter', link: '/folk-med-onde-hensikter' },
+//     { title: 'Lenker',
+//       link: '/lenker',
+//       subItems: [
+//         {title: 'Hvorfor kan noen lenker være farlige?', link: '/lenker/farlige-lenker'},
+//         {title: 'Ukjente lenker', link: '/lenker/ukjente-lenker'},
+//         {title: 'Falske nettsider', link: '/lenker/falske-nettsider'},
+//       ]
+//     },
+//     { title: 'Svindelteknikker', link: '/svindelteknikker' },
+//     { title: 'Gode passord', link: '/passord' },
+// ];
+//
+//   return (
+//    <>
+//     <Navbar />
+//     <div className="App" style={{ marginLeft: '0.5em', display: 'flex', paddingTop: '52px' }}>
+//       <Sidebar items={sidebarItems} />
+//       <div style={{ marginLeft: '240px', padding: '20px', width: '100%' }}>
+//         {children}
+//       </div>
+//     </div>
+//   </>
+//   );
+// };
+//
+// export default Layout;
+
 // src/components/Layout.tsx
 import React from 'react';
 import Sidebar from './sidebar.tsx';
-import Navbar from './Navbar.tsx'
+import Navbar from './Navbar.tsx';
+import { Outlet } from 'react-router-dom'; // Import Outlet to render child routes
 
 type LayoutProps = {
-  children: React.ReactNode; // This will be the main content passed as props
+  children?: React.ReactNode; // Optional children prop
 };
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = () => {
+
+  const sidebarItems = [
+    { title: 'Forside', link: '/' },
+    { title: 'Folk med onde hensikter', link: '/folk-med-onde-hensikter' },
+    {
+      title: 'Lenker',
+      link: '/lenker',
+      subItems: [
+        { title: 'Hvorfor kan noen lenker være farlige?', link: '/lenker/farlige-lenker' },
+        { title: 'Ukjente lenker', link: '/lenker/ukjente-lenker' },
+        { title: 'Falske nettsider', link: '/lenker/falske-nettsider' },
+        { title: 'Lenker i spill og chat', link: '/lenker/spill-lenker',  },
+        { title: 'Hva kan skje?', link: '/lenker/hva-kan-skje', },
+        { title: 'Feil lenke', link: '/lenker/feil-lenke',   },
+      ],
+    },
+    { title: 'Svindelteknikker', link: '/svindelteknikker' },
+    { title: 'Gode passord', link: '/passord' },
+  ];
+
   return (
-   <>
-    <Navbar />
-    <div className="App" style={{ marginLeft: '0.5em', display: 'flex', paddingTop: '52px' }}>
-      <Sidebar items={[
-        { title: 'Forside', link: '/' },
-        { title: 'Folk med onde hensikter', link: '/folk-med-onde-hensikter' },
-        { title: 'Rare/mystiske/ukjente lenker', link: '/lenker' },
-        { title: 'Phishing', link: '/phishing' },
-        { title: 'Gode passord', link: '/passord' },
-      ]} />
-      <div style={{ marginLeft: '240px', padding: '20px', width: '100%' }}>
-        {children}
+    <>
+      <Navbar />
+      <div className="App" style={{ marginLeft: '0.5em', display: 'flex', paddingTop: '52px' }}>
+        <Sidebar items={sidebarItems} />
+        <div style={{ marginLeft: '240px', padding: '20px', width: '100%' }}>
+          <Outlet /> {/* This is where the child routes will render */}
+        </div>
       </div>
-    </div>
-  </>
+    </>
   );
 };
 
 export default Layout;
+

@@ -1,14 +1,21 @@
-
-// src/components/Sidebar.tsx
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+type SidebarItem = {
+  title: string;
+  link: string;
+  subItems?: Array<{ title: string; link: string }>; // Sub-routes
+};
+
 type SidebarProps = {
-  items: Array<{ title: string; link: string }>;
+  items: SidebarItem[];
 };
 
 const Sidebar: React.FC<SidebarProps> = ({ items }) => {
   const location = useLocation(); // Get the current route location
+
+  // Modify `isActive` to only return true when the current path exactly matches the item's link
+  const isActive = (link: string) => location.pathname === link;
 
   return (
     <aside
@@ -17,9 +24,7 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
         width: '250px',
         minHeight: '100vh', // Ensure it fills the height of the viewport
         paddingTop: '20px',
-        backgroundColor: '#f5f5f5', // Light background color
-        // Optional: add some box shadow for better separation
-        // boxShadow: '2px 0 5px rgba(0, 0, 0, 0.1)', 
+        backgroundColor: '#f5f5f5',
       }}
     >
       <p className="menu-label">Kapitler</p>
@@ -31,13 +36,34 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
               style={{
                 display: 'block',
                 padding: '10px 15px',
-                borderRadius: '4px', // Rounded corners for buttons
-                color: location.pathname === item.link ? '#3273dc' : '#363636', // Active link color
-                backgroundColor: location.pathname === item.link ? '#e6f7ff' : 'transparent', // Highlight color
+                borderRadius: '4px',
+                color: isActive(item.link) ? '#3273dc' : '#363636', // Active link color
+                backgroundColor: isActive(item.link) ? '#e6f7ff' : 'transparent', // Highlight color
               }}
             >
               {item.title}
             </Link>
+            {/* Render subItems if they exist */}
+            {item.subItems && (
+              <ul style={{ paddingLeft: '20px', marginTop: '10px' }}>
+                {item.subItems.map((subItem, subIndex) => (
+                  <li key={subIndex}>
+                    <Link
+                      to={subItem.link}
+                      style={{
+                        display: 'block',
+                        padding: '8px 15px',
+                        borderRadius: '4px',
+                        color: isActive(subItem.link) ? '#3273dc' : '#363636', // Active sublink color
+                        backgroundColor: isActive(subItem.link) ? '#e6f7ff' : 'transparent', // Highlight sublink
+                      }}
+                    >
+                      {subItem.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>

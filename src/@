@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout.tsx';
 import Home from './pages/Home.tsx';
 import Hensikter from './pages/Hensikter.tsx';
-import Svindel from './pages/Phishing.tsx';
+import Phishing from './pages/Phishing.tsx';
 import Passord from './pages/Passord.tsx';
 
 import Lenker from './pages/Lenker/Lenker.tsx';
