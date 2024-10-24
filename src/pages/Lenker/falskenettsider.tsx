@@ -6,11 +6,11 @@ import Quiz from '../../components/Quiz.tsx';
 
 const FalskeNettsider: React.FC = () => {
 
-  const quizQuestion = 'Hvem er lærer i DCST1002';
+  const quizQuestion = 'Hva er grunen til noen lenker kan være farlige?';
   const quizOptions = [
-    { id: 1, label: 'Børge', isCorrect: true },
-    { id: 2, label: 'Tor Ivar', isCorrect: false, explanation: 'Tor Ivar er lærer i DCST1001' },
-    { id: 3, label: 'Rivertz', isCorrect: false, explanation: 'Rivertz er lærer i DCST1004' },
+    { id: 1, label: 'De kan sende deg til en falsk nettside og prøve å svinde deg', isCorrect: true },
+    { id: 2, label: 'Det kan bli installert virus på datamaskinen din', isCorrect: true },
+    { id: 3, label: 'Du mister ranken din i FortNight', isCorrect: false },
   ];
 
   const content = (

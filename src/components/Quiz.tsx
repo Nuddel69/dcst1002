@@ -35,7 +35,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
 
   return (
     <div className="quiz" style={{ marginTop: '20px' }}>
-      <h2 className="title is-4">{question}</h2>
+      <h2 className="title is-6">{question}</h2>
       <div className="options" style={{ marginBottom: '20px' }}>
         {options.map(option => {
           // Determine highlight styles based on submission results

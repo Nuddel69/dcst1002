@@ -5,11 +5,12 @@ import Quiz from '../../components/Quiz.tsx';
 
 const FeilLenker: React.FC = () => {
 
-  const quizQuestion = 'Hvem er lærer i DCST1002';
+  const quizQuestion = 'Hva gjør man dersom men er uheldig å trykker seg inn på en farlig lenke?';
   const quizOptions = [
-    { id: 1, label: 'Børge', isCorrect: true },
-    { id: 2, label: 'Tor Ivar', isCorrect: false, explanation: 'Tor Ivar er lærer i DCST1001' },
-    { id: 3, label: 'Rivertz', isCorrect: false, explanation: 'Rivertz er lærer i DCST1004' },
+    { id: 1, label: 'Holder seg innpå nettsiden til mor og far kommer hjem', isCorrect: false},
+    { id: 2, label: 'Fjerner nettsiden fra nattleseren så raskest mulig og søker hjelp hos vokse og IT-avdeligen på skolen', isCorrect: true },
+    { id: 3, label: 'Lagrer nettsiden i nettleseren', isCorrect: false },
+    { id: 4, label: 'Når nettsiden er fjernet er det ikke ikke lengre et problem', isCorrect: false },
   ];
 
   const content = (

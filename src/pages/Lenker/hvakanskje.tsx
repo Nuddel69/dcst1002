@@ -2,17 +2,8 @@
 import React from 'react';
 
 import TextContent from '../../components/TextContent.tsx';
-import Quiz from '../../components/Quiz.tsx';
 
 const HvaKanSkje: React.FC = () => {
-
-  const quizQuestion = 'Hvem er lærer i DCST1002';
-  const quizOptions = [
-    { id: 1, label: 'Børge', isCorrect: true },
-    { id: 2, label: 'Tor Ivar', isCorrect: false, explanation: 'Tor Ivar er lærer i DCST1001' },
-    { id: 3, label: 'Rivertz', isCorrect: false, explanation: 'Rivertz er lærer i DCST1004' },
-  ];
-
   const content = (
     <>
       <p> 
@@ -26,7 +17,6 @@ const HvaKanSkje: React.FC = () => {
         <h1>Læringsmateriale i DCST1002</h1>
         <p>Nettside for 5-7 klasse</p>
         <TextContent title="Lenker" subtitle="Hva kan skje hvis du klikker?" content={content} />
-        <Quiz question={quizQuestion} options={quizOptions} />
     </div>
   );
 };

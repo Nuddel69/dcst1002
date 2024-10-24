@@ -5,12 +5,11 @@ import Quiz from '../../components/Quiz.tsx';
 
 const UkjenteLenker: React.FC = () => {
 
-  const quizQuestion = 'Hva gjør du om du får tilsendt en rar melding fra en fremmed som inneholder en mystisk lenke? ';
+  const quizQuestion = 'Hvilken lenke er trygg å trykke på?';
   const quizOptions = [
-    { id: 1, label: 'Sletter den', isCorrect: true },
-    { id: 2, label: 'Trykker på lenka for å passe på at det ikke er noe farlig', isCorrect: false, explanation: '' },
-    { id: 3, label: 'Varsler til mor eller far', isCorrect: true, explanation: '' },
-    { id: 4, label: 'Sender lenka videre til alle vennene dine', isCorrect: false, explanation: '' },
+    { id: 1, label: 'https://www.nettvett.no/', isCorrect: true },
+    { id: 2, label: 'http://www.gratispenger.no/', isCorrect: false, explanation: 'Et hint du kan bruke for å se om en link er trygg, er å lete etter httpS i nettadressen. Det er også lurt å være forsiktig med ting som ser ut til å være for godt til å være sant.'},
+    { id: 3, label: 'http://ww2.fr3em8ney.ru/', isCorrect: false, explanation: 'Vær forsiktig med nettsider som blander mye bokstaver og tall, eller som ikke følger www. Disse er ofte dårlig lagd og satt opp så fort som mulig for å lure noen.'},
   ];
 
   const content = (

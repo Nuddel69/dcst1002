@@ -5,11 +5,12 @@ import Quiz from '../../components/Quiz.tsx';
 
 const SpillLenker: React.FC = () => {
 
-  const quizQuestion = 'Hvem er lærer i DCST1002';
+  const quizQuestion = 'Hva gjør du om du får tilsendt en rar melding fra en fremmed som inneholder en mystisk lenke? ';
   const quizOptions = [
-    { id: 1, label: 'Børge', isCorrect: true },
-    { id: 2, label: 'Tor Ivar', isCorrect: false, explanation: 'Tor Ivar er lærer i DCST1001' },
-    { id: 3, label: 'Rivertz', isCorrect: false, explanation: 'Rivertz er lærer i DCST1004' },
+    { id: 1, label: 'Sletter den', isCorrect: true },
+    { id: 2, label: 'Trykker på lenka for å passe på at det ikke er noe farlig', isCorrect: false, explanation: '' },
+    { id: 3, label: 'Varsler til mor eller far', isCorrect: true, explanation: '' },
+    { id: 4, label: 'Sender lenka videre til alle vennene dine', isCorrect: false, explanation: '' },
   ];
 
   const content = (
