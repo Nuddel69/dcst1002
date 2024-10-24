@@ -16,6 +16,9 @@ import FalskeNettsider from './pages/Lenker/falskenettsider.tsx';
 import SpillLenker from './pages/Lenker/spill.tsx'
 import HvaKanSkje from './pages/Lenker/hvakanskje.tsx'
 import FeilLenker from './pages/Lenker/klikkerfeil.tsx'
+import GratisLenker from './pages/Lenker/gratis.tsx'
+
+import Spillespill from './pages/spillespill.tsx'
 
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -33,6 +36,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       { path: '/folk-med-onde-hensikter', element: <Hensikter /> },
+      { path: '/spillespill', element: <Spillespill /> },
 
       {
         path: '/lenker',
@@ -44,6 +48,7 @@ const router = createBrowserRouter([
           { path: 'spill-lenker', element: <SpillLenker /> },
           { path: 'hva-kan-skje', element: <HvaKanSkje /> },
           { path: 'feil-lenke', element: <FeilLenker /> },
+          { path: 'gratis-lenke', element: <GratisLenker /> },
         ],
       },
       { path: '/svindelteknikker', element: <Svindel /> },
