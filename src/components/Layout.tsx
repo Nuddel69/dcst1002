@@ -12,6 +12,7 @@ const Layout: React.FC<LayoutProps> = () => {
   const sidebarItems = [
     { title: 'Forside', link: '/' },
     { title: 'Folk med onde hensikter', link: '/folk-med-onde-hensikter' },
+    { title: 'Svindelteknikker', link: '/svindelteknikker' },
     {
       title: 'Lenker',
       link: '/lenker',
@@ -25,8 +26,18 @@ const Layout: React.FC<LayoutProps> = () => {
         { title: 'Løfter og gratis ting', link: '/lenker/gratis-lenke',   },
       ],
     },
-    { title: 'Svindelteknikker', link: '/svindelteknikker' },
-    { title: 'Gode passord', link: '/passord' },
+    { title: 'Gode passord', 
+      link: '/passord',
+      subItems: [
+        { title: 'Hvorfor er passord viktige?', link: '/passord/viktig' },
+        { title: 'Unngå enkle passord', link: '/passord/enkle' },
+        { title: 'Hva er et sterkt passord?', link: '/passord/sterke' },
+        { title: 'Hvordan huske passordene dine', link: '/passord/huske' },
+        { title: 'Hva er tofaktorautentisering?', link: '/passord/tofaktor' },
+        { title: 'Hva gjør du hvis noen får tak i passordet ditt?', link: '/passord/mistet' },
+        { title: 'Hvordan holder jeg passordene mine trygge?', link: '/passord/trygge' },
+      ]
+    },
   ];
 
   return (
