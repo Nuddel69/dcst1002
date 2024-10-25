@@ -14,21 +14,7 @@ const VideoContent: React.FC<VideoContentProps> = ({ videoUrl, title, src_text})
   // Inline styles for responsive video container
   const videoContainerStyle = {
     borderRadius: '10px', // Slightly rounded corners
-    position: 'relative' as 'relative',
-    paddingBottom: '56.25%', // 16:9 aspect ratio
-    height: 0,
     overflow: 'hidden',
-    maxWidth: '100%',
-    backgroundColor: '#000', // Ensures a black background for empty space
-  };
-
-  const iframeStyle = {
-    position: 'absolute' as 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    border: 'none', // Remove default border
   };
 
   if (src_text) {
@@ -38,14 +24,15 @@ const VideoContent: React.FC<VideoContentProps> = ({ videoUrl, title, src_text})
   return (
     <div className="content" style={{ marginBottom: '20px' }}>
       {title && <h3 className="title is-5">{title}</h3>} {/* Optional title */}
-      <div style={videoContainerStyle}>
+      <figure className="image is-16by9" style={videoContainerStyle}>
         <iframe
-          style={iframeStyle}
+          className="has-ratio"
           src={videoUrl}
+          frameborder="0"
           allowFullScreen
           title={title || 'Embedded video'}
         > </iframe>
-      </div>
+      </figure>
         {source}
     </div>
   );

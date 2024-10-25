@@ -40,18 +40,20 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
         {options.map(option => {
           // Determine highlight styles based on submission results
           const isCorrect = option.isCorrect;
-          let highlightStyle = {};
+          let highlightClasses = "";
 
           if (isSubmitted) {
             // Highlight correct option in green
             if (isCorrect) {
-              highlightStyle = { backgroundColor: '#c3e6cb', color: '#155724' };
+              highlightClasses = "button is-primary is-light is-outlined";
             }
             // Highlight selected wrong option in red
             if (selectedOption === option.id && !isCorrect) {
-              highlightStyle = { backgroundColor: '#f5c6cb', color: '#721c24' };
+              highlightClasses = "button is-danger is-light is-outlined";
             }
           }
+
+          let resultBoxClasses = "notification is-light" + ((result === 'Riktig!') ? "is-primary" : "is-danger" );
 
           return (
             <div key={option.id} className="field">
@@ -66,13 +68,13 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
               />
               <label
                 htmlFor={`option-${option.id}`}
+                className={highlightClasses}
                 style={{
                   marginLeft: '10px',
                   padding: '10px',
                   borderRadius: '4px',
                   display: 'inline-block',
                   cursor: 'pointer',
-                  ...highlightStyle,
                 }}
               >
                 {option.label}
@@ -86,7 +88,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
       </button>
 
       {result && (
-        <div className="notification" style={{ marginTop: '20px', ...((result === 'Riktig!') ? { backgroundColor: '#d4edda', color: '#155724' } : { backgroundColor: '#f8d7da', color: '#721c24' }) }}>
+        <div className={resultBoxClasses} style={{ marginTop: '20px'}}>
           <strong>{result}</strong>
           {explanation && <div>Forklaring: {explanation}</div>}
         </div>

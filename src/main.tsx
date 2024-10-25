@@ -26,7 +26,8 @@ import ToFaktor from './pages/Passord/tofaktor.tsx';
 import PassordMistet from './pages/Passord/hva_gjør_du.tsx';
 import PassordTrygge from './pages/Passord/trygge.tsx';
 
-import Spillespill from './pages/spillespill.tsx'
+import Spillespill from './pages/spillespill.tsx';
+import Kilder from './pages/Kilder.tsx';
 
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
     element: <Layout />, // Layout will wrap around the routes
     children: [
       { path: '/', element: <Home /> },
+      { path: '/kilder', element: <Kilder /> },
       { path: '/folk-med-onde-hensikter', element: <Hensikter /> },
       { path: '/spillespill', element: <Spillespill /> },
 
