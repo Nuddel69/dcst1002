@@ -27,7 +27,7 @@ import PassordMistet from './pages/Passord/hva_gjør_du.tsx';
 import PassordTrygge from './pages/Passord/trygge.tsx';
 
 import Spillespill from './pages/spillespill.tsx';
-import Kilder from './pages/Kilder.tsx';
+import Kilder from './pages/kilder.tsx';
 
 
 import '@fortawesome/fontawesome-free/css/all.min.css';

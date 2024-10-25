@@ -53,8 +53,6 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
             }
           }
 
-          let resultBoxClasses = "notification is-light" + ((result === 'Riktig!') ? "is-primary" : "is-danger" );
-
           return (
             <div key={option.id} className="field">
               <input
@@ -88,7 +86,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
       </button>
 
       {result && (
-        <div className={resultBoxClasses} style={{ marginTop: '20px'}}>
+        <div className={ ((result === 'Riktig!') ? "notification is-light is-primary" : "notification is-light is-danger") } style={{ marginTop: '20px'}}>
           <strong>{result}</strong>
           {explanation && <div>Forklaring: {explanation}</div>}
         </div>

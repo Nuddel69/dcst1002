@@ -46,7 +46,7 @@ const Layout: React.FC<LayoutProps> = () => {
       <div className="App" style={{ display: 'flex' }}>
         <Sidebar items={sidebarItems} />
         <div style={{ marginLeft: '240px', padding: '20px', width: '100%' }}>
-          <h1 class>Læringsmateriale i DCST1002</h1>
+          <h1>Læringsmateriale i DCST1002</h1>
           <p>Kurs for elever i 5-7 klasse</p>
           <Outlet /> 
         </div>

@@ -28,7 +28,7 @@ const VideoContent: React.FC<VideoContentProps> = ({ videoUrl, title, src_text})
         <iframe
           className="has-ratio"
           src={videoUrl}
-          frameborder="0"
+          frameBorder="0"
           allowFullScreen
           title={title || 'Embedded video'}
         > </iframe>
