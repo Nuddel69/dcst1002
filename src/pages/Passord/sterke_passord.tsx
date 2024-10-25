@@ -16,8 +16,6 @@ const SterkePassord: React.FC = () => {
 
   return (
     <div>
-        <h1>Læringsmateriale i DCST1002</h1>
-        <p>Nettside for 5-7 klasse</p>
         <TextContent title="Passord" subtitle="Hva er et sterkt passord?" content={content} />
     </div>
   );

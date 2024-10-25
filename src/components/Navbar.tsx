@@ -12,9 +12,15 @@ const Navbar: React.FC = () => {
 
       <div className="navbar-menu">
         <div className="navbar-end">
-          {/* Add additional navbar items if needed */}
+
+          {/* Citations page */}
+          <a class="navbar-item has-text-weight-light is-tab" href="/kilder">
+            Kilder
+          </a>
+
+          {/* <div className="navbar-item"></div> */}
+          
           <div className="navbar-item">
-            {/* The dyslexia toggle switch */}
             <FontToggle />
           </div>
         </div>

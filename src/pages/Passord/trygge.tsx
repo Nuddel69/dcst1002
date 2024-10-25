@@ -19,8 +19,6 @@ const PassordTrygge: React.FC = () => {
 
   return (
     <div>
-        <h1>Læringsmateriale i DCST1002</h1>
-        <p>Nettside for 5-7 klasse</p>
         <TextContent title="Passord" subtitle="Hvordan holder jeg passordene mine trygge?" content={content} />
     </div>
   );

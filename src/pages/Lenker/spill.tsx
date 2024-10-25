@@ -23,8 +23,6 @@ const SpillLenker: React.FC = () => {
 
   return (
     <div>
-        <h1>Læringsmateriale i DCST1002</h1>
-        <p>Nettside for 5-7 klasse</p>
         <TextContent title="Lenker" subtitle="Lenker i spill og chatter" content={content} />
         <Quiz question={quizQuestion} options={quizOptions} />
     </div>

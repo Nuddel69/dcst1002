@@ -43,10 +43,12 @@ const Layout: React.FC<LayoutProps> = () => {
   return (
     <>
       <Navbar />
-      <div className="App" style={{ marginLeft: '0.5em', display: 'flex', paddingTop: '52px' }}>
+      <div className="App" style={{ display: 'flex' }}>
         <Sidebar items={sidebarItems} />
         <div style={{ marginLeft: '240px', padding: '20px', width: '100%' }}>
-          <Outlet /> {/* This is where the child routes will render */}
+          <h1>Læringsmateriale i DCST1002</h1>
+          <p>Kurs for elever i 5-7 klasse</p>
+          <Outlet /> 
         </div>
       </div>
     </>

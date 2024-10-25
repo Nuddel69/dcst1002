@@ -31,17 +31,18 @@ const Home: React.FC = () => {
 
   return (
     <div>
-        <h1>Læringsmateriale i DCST1002</h1>
-        <p>Nettside for 5-7 klasse</p>
         <TextContent title="Hjem" content={content} />
         <ImageContent
           title="Testbilde"
           src="https://unsplash.it/400/200"
           alt="Placeholder Image"
+          src_text="unsplash.it"
         />
+
           <VideoContent
           title="Opplæringsvideo"
           videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your video URL
+          src_text="youtube.com"
         />
         <Quiz question={quizQuestion} options={quizOptions} />
     </div>

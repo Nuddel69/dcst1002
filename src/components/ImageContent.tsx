@@ -7,7 +7,15 @@ type ImageContentProps = {
   title?: string;
 };
 
-const ImageContent: React.FC<ImageContentProps> = ({ src, alt, title }) => {
+const ImageContent: React.FC<ImageContentProps> = ({ src, alt, title, src_text }) => {
+
+  var source = 0;
+
+  if (src_text) {
+    source = <p className="is-italic has-text-weight-light is-size-7" >Bilde hentet fra: {src_text}</p>
+
+  }
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Open/close modal function
@@ -49,6 +57,7 @@ const ImageContent: React.FC<ImageContentProps> = ({ src, alt, title }) => {
       <div className="content" style={{ marginBottom: '20px' }}>
         {title && <h3 className="title is-5">{title}</h3>} {/* Optional title */}
         <img src={src} alt={alt} style={imageStyle} onClick={toggleModal} />
+        {source}
       </div>
 
       {/* Fullscreen Modal */}

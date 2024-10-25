@@ -19,12 +19,14 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
 
   return (
     <aside
-      className="menu is-fixed-left"
+      className="menu "
       style={{
         width: '250px',
         minHeight: '100vh', // Ensure it fills the height of the viewport
         paddingTop: '20px',
-        backgroundColor: '#f5f5f5',
+        paddingLeft: '10px',
+        paddingRight: '10px',
+        backgroundColor: 'var(--sidebar-background-colour)',
       }}
     >
       <p className="menu-label">Kapitler</p>
@@ -37,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
                 display: 'block',
                 padding: '10px 15px',
                 borderRadius: '4px',
-                color: isActive(item.link) ? '#3273dc' : '#363636', // Active link color
+                color: isActive(item.link) ? '#3273dc' : '', // Active link color
                 backgroundColor: isActive(item.link) ? '#e6f7ff' : 'transparent', // Highlight color
               }}
             >
@@ -45,16 +47,15 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
             </Link>
             {/* Render subItems if they exist */}
             {item.subItems && (
-              <ul style={{ paddingLeft: '20px', marginTop: '10px' }}>
+              <ul>
                 {item.subItems.map((subItem, subIndex) => (
                   <li key={subIndex}>
                     <Link
                       to={subItem.link}
                       style={{
                         display: 'block',
-                        padding: '8px 15px',
                         borderRadius: '4px',
-                        color: isActive(subItem.link) ? '#3273dc' : '#363636', // Active sublink color
+                        color: isActive(subItem.link) ? '#3273dc' : '', // Active sublink color
                         backgroundColor: isActive(subItem.link) ? '#e6f7ff' : 'transparent', // Highlight sublink
                       }}
                     >
