@@ -4,11 +4,12 @@ import React from 'react';
 type VideoContentProps = {
   videoUrl: string;
   title?: string;
+  src_text?: string;
 };
 
 
 const VideoContent: React.FC<VideoContentProps> = ({ videoUrl, title, src_text}) => {
-  var source = 0;
+  var source = null;
 
   // Inline styles for responsive video container
   const videoContainerStyle = {

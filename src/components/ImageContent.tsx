@@ -5,11 +5,12 @@ type ImageContentProps = {
   src: string;
   alt: string;
   title?: string;
+  src_text?: string;
 };
 
 const ImageContent: React.FC<ImageContentProps> = ({ src, alt, title, src_text }) => {
 
-  var source = 0;
+  var source = null;
 
   if (src_text) {
     source = <p className="is-italic has-text-weight-light is-size-7" >Bilde hentet fra: {src_text}</p>

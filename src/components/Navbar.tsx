@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         <div className="navbar-end">
 
           {/* Citations page */}
-          <a class="navbar-item has-text-weight-light is-tab" href="/kilder">
+          <a className="navbar-item has-text-weight-light is-tab" href="/kilder">
             Kilder
           </a>
 
