@@ -43,7 +43,7 @@ const Layout: React.FC<LayoutProps> = () => {
   return (
     <>
       <Navbar />
-      <div className="App" style={{ display: 'flex' }}>
+      <div className="App" style={{ display: 'flex' }} >
         <Sidebar items={sidebarItems} />
         <div style={{ marginLeft: '240px', padding: '20px', width: '100%' }}>
           <h1>Læringsmateriale i DCST1002</h1>
