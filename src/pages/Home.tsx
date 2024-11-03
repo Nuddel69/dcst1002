@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         <TextContent title="Hjem" content={content} />
         <ImageContent
           title="Testbilde"
-          src="https://unsplash.it/400/200"
+          src="https://unsplash.it/1600/800"
           alt="Placeholder Image"
           src_text="unsplash.it"
         />

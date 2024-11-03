@@ -1,13 +1,26 @@
-// src/main.tsx
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+// Misc
 import Layout from './components/Layout.tsx';
 import Home from './pages/Home.tsx';
-import Hensikter from './pages/Hensikter.tsx';
-import Svindel from './pages/Phishing.tsx';
+import Spillespill from './pages/spillespill.tsx';
+import Kilder from './pages/kilder.tsx';
 
+// Hensikter
+import Hensikter from './pages/Hensikter/Hensikter.tsx';
+import Bilder from './pages/Hensikter/Bilder.tsx';
+import Brukernavn from './pages/Hensikter/Brukernavn.tsx';
+import Lureri from './pages/Hensikter/Lureri.tsx';
+
+// Svindel
+import SvindelTeknikker from './pages/Svindelteknikker/Svindelteknikker.tsx'
+import Phishing from './pages/Svindelteknikker/Phishing.tsx'
+import Pharming from './pages/Svindelteknikker/Pharming.tsx'
+import SocialEngineering from './pages/Svindelteknikker/SocialEngineering.tsx'
+
+// Lenker
 import Lenker from './pages/Lenker/Lenker.tsx';
 import FarligeLenker from './pages/Lenker/farlige.tsx';
 import UkjenteLenker from './pages/Lenker/ukjent.tsx';
@@ -17,6 +30,7 @@ import HvaKanSkje from './pages/Lenker/hvakanskje.tsx'
 import FeilLenker from './pages/Lenker/klikkerfeil.tsx'
 import GratisLenker from './pages/Lenker/gratis.tsx'
 
+// Passord
 import Passord from './pages/Passord/passord.tsx';
 import PassordViktig from './pages/Passord/hvorfor_viktig.tsx';
 import PassordEnkle from './pages/Passord/ikke_enkle.tsx';
@@ -25,9 +39,6 @@ import PassordHuske from './pages/Passord/hvordan_huske.tsx';
 import ToFaktor from './pages/Passord/tofaktor.tsx';
 import PassordMistet from './pages/Passord/hva_gjør_du.tsx';
 import PassordTrygge from './pages/Passord/trygge.tsx';
-
-import Spillespill from './pages/spillespill.tsx';
-import Kilder from './pages/kilder.tsx';
 
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -43,14 +54,30 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />, // Layout will wrap around the routes
     children: [
+
       { path: '/', element: <Home /> },
       { path: '/kilder', element: <Kilder /> },
-      { path: '/folk-med-onde-hensikter', element: <Hensikter /> },
       { path: '/spillespill', element: <Spillespill /> },
 
-      { path: '/svindelteknikker', element: <Svindel /> },
       {
-        path: '/lenker',
+        path: '/folk-med-vonde-hensikter',
+        children: [
+          { path: '', element: <Hensikter /> },
+          { path: 'lureri', element: <Lureri /> },
+          { path: 'brukernavn', element: <Brukernavn /> },
+          { path: 'bilder', element: <Bilder /> },
+          ],
+      },
+      {
+        path: '/svindelteknikker',
+        children: [
+          { path: '', element: <SvindelTeknikker /> },
+          { path: 'pharming', element: <Pharming /> },
+          { path: 'phishing', element: <Phishing /> },
+          { path: 'social-engineering', element: <SocialEngineering /> },
+          ],
+      },
+      { path: '/lenker',
         children: [
           { path: '', element: <Lenker /> },
           { path: 'farlige-lenker', element: <FarligeLenker /> },

@@ -4,7 +4,7 @@ import TextContent from '../../components/TextContent.tsx';
 import Quiz from '../../components/Quiz.tsx';
 import VideoContent from '../../components/VideoContent.tsx';
 
-const FalskeNettsider: React.FC = () => {
+const Svindelteknikker: React.FC = () => {
 
   const quizQuestion = 'Hva er grunen til noen lenker kan være farlige?';
   const quizOptions = [
@@ -16,14 +16,13 @@ const FalskeNettsider: React.FC = () => {
   const content = (
     <>
       <p> 
-      En falsk nettside er designet for å lure deg til å tro at det er en ekte nettside, men som egentlig blir brukt til å lure deg. Det kan for eksmepel være en kopi av en allerede eksisterende nettside. Slike nettsider blir brukt for å kunne stjele opplysninger om deg selv og brukernavn og passord.
       </p>
     </>
   );
 
   return (
     <div>
-        <TextContent title="Lenker" subtitle="Falske nettsider" content={content} />
+        <TextContent title="Svindelteknikker" subtitle="Falske nettsider" content={content} />
         <VideoContent
           title=""
           videoUrl="https://www.youtube.com/embed/gjSkVS8f7OU"
@@ -34,4 +33,4 @@ const FalskeNettsider: React.FC = () => {
   );
 };
 
-export default FalskeNettsider;
+export default Svindelteknikker;

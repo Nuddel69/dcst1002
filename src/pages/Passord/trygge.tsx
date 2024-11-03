@@ -1,8 +1,16 @@
 import React from 'react';
 
 import TextContent from '../../components/TextContent.tsx';
+import Quiz from '../../components/Quiz.tsx';
 
 const PassordTrygge: React.FC = () => {
+  const quizQuestion = 'Hvorfor bruker man ikke samme passord på flere plattformer?';
+  const quizOptions = [
+    { id: 1, label: 'Hvis man glemmer passordet tar det lang tid å gjenopprette passordet på  flere plattformer', isCorrect: false },
+    { id: 2, label: 'Enn burde bruke samme passord på flere plattformer', isCorrect: false },
+    { id: 3, label: 'Hvis noen får tilgang til passordet ditt kan de få tilgang til flere plattformer', isCorrect: true },
+  ];
+
   const content = (
     <>
       <p> 
@@ -20,6 +28,7 @@ const PassordTrygge: React.FC = () => {
   return (
     <div>
         <TextContent title="Passord" subtitle="Hvordan holder jeg passordene mine trygge?" content={content} />
+        <Quiz question={quizQuestion} options={quizOptions} />
     </div>
   );
 };

@@ -11,8 +11,24 @@ const Layout: React.FC<LayoutProps> = () => {
 
   const sidebarItems = [
     { title: 'Forside', link: '/' },
-    { title: 'Folk med onde hensikter', link: '/folk-med-onde-hensikter' },
-    { title: 'Svindelteknikker', link: '/svindelteknikker' },
+    {
+      title: 'Folk ned vonde hensikter',
+      link: '/folk-med-vonde-hensikter',
+      subItems: [
+        { title: 'Lureri', link: '/folk-med-vonde-hensikter/lureri',   },
+        { title: 'Brukernavn', link: '/folk-med-vonde-hensikter/brukernavn',   },
+        { title: 'Bilder', link: '/folk-med-vonde-hensikter/bilder',   },
+      ],
+    },
+    {
+      title: 'Svindelteknikker',
+      link: '/svindelteknikker',
+      subItems: [
+        { title: 'Phishing', link: '/svindelteknikker/phishing',   },
+        { title: 'Pharming', link: '/svindelteknikker/pharming',   },
+        { title: 'Social Engineering', link: '/svindelteknikker/social-engineering',   },
+      ],
+    },
     {
       title: 'Lenker',
       link: '/lenker',

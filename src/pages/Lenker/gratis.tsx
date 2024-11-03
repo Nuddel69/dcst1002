@@ -2,6 +2,7 @@
 import React from 'react';
 
 import TextContent from '../../components/TextContent.tsx';
+import VideoContent from '../../components/VideoContent.tsx';
 
 const GratisLenker: React.FC = () => {
 
@@ -16,6 +17,11 @@ const GratisLenker: React.FC = () => {
   return (
     <div>
         <TextContent title="Lenker" subtitle="Lenker som lover noe gratis" content={content} />
+        <VideoContent
+          title=""
+          videoUrl="https://www.youtube.com/embed/Vk_GlV7ZED0"
+          src_text="eika.no på youtube.com"
+        />
     </div>
   );
 };
