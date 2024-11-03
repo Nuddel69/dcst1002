@@ -1,4 +1,3 @@
-// src/components/Quiz.tsx
 import React, { useState } from 'react';
 
 type Option = {
@@ -27,7 +26,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
         setExplanation(null);
       } else {
         setResult('Feil!');
-        setExplanation(chosenOption?.explanation || 'Ingen forklaring gitt.');
+        setExplanation(chosenOption?.explanation || null);
       }
       setIsSubmitted(true); // Mark the quiz as submitted
     }

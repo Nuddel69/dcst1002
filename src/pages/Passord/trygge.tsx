@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TextContent from '../../components/TextContent.tsx';
+import VideoContent from '../../components/VideoContent.tsx'
 import Quiz from '../../components/Quiz.tsx';
 
 const PassordTrygge: React.FC = () => {
@@ -28,6 +29,11 @@ const PassordTrygge: React.FC = () => {
   return (
     <div>
         <TextContent title="Passord" subtitle="Hvordan holder jeg passordene mine trygge?" content={content} />
+        <VideoContent
+          title=""
+          videoUrl="https://www.youtube.com/embed/IuaCexA3CB0"
+          src_text="KiNS foreningen kommunal informasjonssikkerhet på youtube.com"
+        />
         <Quiz question={quizQuestion} options={quizOptions} />
     </div>
   );
