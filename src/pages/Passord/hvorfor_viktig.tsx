@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TextContent from '../../components/TextContent.tsx';
+import ImageContent from '../../components/ImageContent.tsx'
 
 const PassordViktig: React.FC = () => {
   const content = (
@@ -17,6 +18,12 @@ const PassordViktig: React.FC = () => {
   return (
     <div>
         <TextContent title="Passord" subtitle="Hvorfor er passord viktige?" content={content} />
+        <ImageContent
+          title=""
+          src="https://th.bing.com/th/id/OIG3.s_1Azyd.9H.ceyZp6dks?pid=ImgGn"
+          alt=""
+          src_text="Bing Bildeskaper"
+        />
     </div>
   );
 };

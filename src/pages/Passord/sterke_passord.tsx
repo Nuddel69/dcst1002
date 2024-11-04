@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TextContent from '../../components/TextContent.tsx';
+import ImageContent from '../../components/ImageContent.tsx'
 import Quiz from '../../components/Quiz.tsx';
 
 const SterkePassord: React.FC = () => {
@@ -25,7 +26,14 @@ const SterkePassord: React.FC = () => {
   return (
     <div>
         <TextContent title="Passord" subtitle="Hva er et sterkt passord?" content={content} />
+        <ImageContent
+          title=""
+          src="https://windows.atsit.in/no/wp-content/uploads/sites/20/2022/11/hva-gjor-et-godt-og-sterkt-passord-1.jpg"
+          alt=""
+          src_text="All Things Windows"
+        />
         <Quiz question={quizQuestion} options={quizOptions} />
+
     </div>
   );
 };

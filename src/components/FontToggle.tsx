@@ -22,7 +22,7 @@ const FontToggle: React.FC = () => {
         />
         <span className="slider"></span>
       </label>
-      <span className="toggle-label">OpenDyslexic</span> {/* Label for the toggle */}
+      <span className="toggle-label" style={{ fontFamily: 'OpenDyslexic' }}>OpenDyslexic</span> {/* Label for the toggle */}
     </div>
   );
 };
