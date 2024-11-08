@@ -60,6 +60,10 @@ const Kilder: React.FC = () => {
           <li>
             All Things Windows. (2022, 7. november). <span className='is-italic'>Hva gjør et godt og sterkt passord</span> [Artikkel]. All Things Windows. <a href="https://windows.atsit.in/no/2217/">https://windows.atsit.in/no/2217/</a>
           </li>
+          <br />
+          <li>
+            Inology. (2024, mars 18). <span className='is-italic'>A beginner's guide to creating strong passwords in 2024</span>. Inology. Hentet 18.10.2024 fra <a href="https://www.inology.co.uk/2024/03/18/a-beginners-guide-to-creating-strong-passwords-in-2024/">https://www.inology.co.uk/2024/03/18/a-beginners-guide-to-creating-strong-passwords-in-2024/</a>
+          </li>
         </ul>
       </div>
 
