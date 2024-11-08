@@ -8,7 +8,7 @@ const Hensikter: React.FC = () => {
   const content = (
     <>
       <p>
-        Det er ikke alle som vil deg vel, og folk på internett er slett ikke et unntak. Noen vil bruke deg for penger, andre vil gi deg virus, og noen synes bare det er gøy å spre kaos. Det er viktig å vite at disse menneskene finnes. Aldri stol på folk på nett, med mindre man vet hvem de er.
+        Det er ikke alle som vil deg vel, og folk på internett er slett ikke et unntak. Noen vil bruke deg for penger, andre vil gi deg virus, og noen synes bare det er gøy å spre kaos. Det er viktig å vite at disse menneskene finnes. Aldri stol på folk på nett.
       </p>
     </>
   );

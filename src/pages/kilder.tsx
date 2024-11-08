@@ -42,7 +42,7 @@ const Kilder: React.FC = () => {
         <span className='has-text-weight-semibold'>Bildekilder:</span>
         <ul>
           <li>
-            Cloudflare. (2023). <span className='is-italic'>Cloudflare Radar URL Scanner</span> [Stock]. Cloudflare. <a href="https://cultura-informatica.com/wp-content/uploads/2023/03/Cloudflare-Radar-URL-Scanner-1.jpg">https://cultura-informatica.com/wp-content/uploads/2023/03/Cloudflare-Radar-URL-Scanner-1.jpg</a>
+            Cultura Informatica. (2023). <span className='is-italic'>Cloudflare Presenta su Herramienta Radar URL Scanner</span> [Stock]. Cultura-informatica. <a href="https://cultura-informatica.com/wp-content/uploads/2023/03/Cloudflare-Radar-URL-Scanner-1.jpg">https://cultura-informatica.com/wp-content/uploads/2023/03/Cloudflare-Radar-URL-Scanner-1.jpg</a>
           </li>
           <br />
           <li>

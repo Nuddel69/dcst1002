@@ -15,7 +15,13 @@ const UkjenteLenker: React.FC = () => {
   const content = (
     <>
       <p>
-        Ukjente lenker vil være de du ikke har sett før eller som ser annerledes ut enn det du er vant til. Det er gjern lenker som fører til usikre eller faske nettsider.  Slike lenker kan gjennskjennes ved mystiske tegn i URL’en eller nettadresser generelt ser merkelig ut, lite informasjon rundt lenken eller ved at senderen av lenka er ukjent. senderen av en lenke kan også utgi seg for å være noen de ikke er, og man må da ta en egen vurdering på om senderen er autentisk eller ikke. Lenker kan være maskerte, slik som på eksempelet over. Ved å ta musepereren over lenka (uten å klikke på den), vil den faktiske nettsiden vises under. Slik kan man vurdere om nettsiden og lenka passer sammen.
+        Ukjente lenker vil være de du ikke har sett før eller som ser annerledes ut enn det du er vant til.
+        Det er gjerne lenker som fører til usikre eller falske nettsider.  Slike lenker kan gjennskjennes ved mystiske
+        tegn i URL’en eller nettadresser som generelt ser merkelig ut, lite informasjon rundt lenken eller ved at senderen
+        av lenka er ukjent. Senderen av en lenke kan også utgi seg for å være noen de ikke er, og man må da ta en egen
+        vurdering på om senderen er autentisk eller ikke. Lenker kan være maskerte, slik som på eksempelet over. Ved å
+        ta musepereren over lenka (uten å klikke på den), vil den faktiske nettsiden vises under. Slik kan man vurdere
+        om nettsiden og lenka passer sammen.
       </p>
     </>
   );
