@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* <div className="navbar-item"></div> */}
-          
+
           <div className="navbar-item">
             <FontToggle />
           </div>

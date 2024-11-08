@@ -5,7 +5,7 @@ import TextContent from '../components/TextContent.tsx';
 const Kilder: React.FC = () => {
   const content = (
     <>
-      <p> 
+      <p>
         All informasjon som forekommer i dette læringsmaterialet er enten fra undervisning i emnet DCST1002 2024, eller hentet fra følgende kilder:
       </p>
       <div className="block">
@@ -57,7 +57,7 @@ const Kilder: React.FC = () => {
 
   return (
     <div>
-        <TextContent title="Kilder" content={content} />
+      <TextContent title="Kilder" content={content} />
     </div>
   );
 };

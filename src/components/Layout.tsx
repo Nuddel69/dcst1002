@@ -12,21 +12,21 @@ const Layout: React.FC<LayoutProps> = () => {
   const sidebarItems = [
     { title: 'Forside', link: '/' },
     {
-      title: 'Folk ned vonde hensikter',
+      title: 'Folk med vonde hensikter',
       link: '/folk-med-vonde-hensikter',
       subItems: [
-        { title: 'Lureri', link: '/folk-med-vonde-hensikter/lureri',   },
-        { title: 'Brukernavn', link: '/folk-med-vonde-hensikter/brukernavn',   },
-        { title: 'Bilder', link: '/folk-med-vonde-hensikter/bilder',   },
+        { title: 'Lureri', link: '/folk-med-vonde-hensikter/lureri', },
+        { title: 'Brukernavn', link: '/folk-med-vonde-hensikter/brukernavn', },
+        { title: 'Bilder', link: '/folk-med-vonde-hensikter/bilder', },
       ],
     },
     {
       title: 'Svindelteknikker',
       link: '/svindelteknikker',
       subItems: [
-        { title: 'Phishing', link: '/svindelteknikker/phishing',   },
-        { title: 'Pharming', link: '/svindelteknikker/pharming',   },
-        { title: 'Social Engineering', link: '/svindelteknikker/social-engineering',   },
+        { title: 'Phishing', link: '/svindelteknikker/phishing', },
+        { title: 'Pharming', link: '/svindelteknikker/pharming', },
+        { title: 'Social Engineering', link: '/svindelteknikker/social-engineering', },
       ],
     },
     {
@@ -36,13 +36,14 @@ const Layout: React.FC<LayoutProps> = () => {
         { title: 'Hvorfor kan noen lenker være farlige?', link: '/lenker/farlige-lenker' },
         { title: 'Ukjente lenker', link: '/lenker/ukjente-lenker' },
         { title: 'Falske nettsider', link: '/lenker/falske-nettsider' },
-        { title: 'Lenker i spill og chat', link: '/lenker/spill-lenker',  },
+        { title: 'Lenker i spill og chat', link: '/lenker/spill-lenker', },
         { title: 'Hva kan skje?', link: '/lenker/hva-kan-skje', },
-        { title: 'Feil lenke', link: '/lenker/feil-lenke',   },
-        { title: 'Løfter og gratis ting', link: '/lenker/gratis-lenke',   },
+        { title: 'Feil lenke', link: '/lenker/feil-lenke', },
+        { title: 'Løfter og gratis ting', link: '/lenker/gratis-lenke', },
       ],
     },
-    { title: 'Gode passord', 
+    {
+      title: 'Gode passord',
       link: '/passord',
       subItems: [
         { title: 'Hvorfor er passord viktige?', link: '/passord/viktig' },
@@ -61,10 +62,10 @@ const Layout: React.FC<LayoutProps> = () => {
       <Navbar />
       <div className="App" style={{ display: 'flex' }} >
         <Sidebar items={sidebarItems} />
-        <div style={{ marginLeft: '240px', padding: '20px', width: '100%' }}>
+        <div style={{ marginLeft: '200px', marginRight: '100px', padding: '20px', width: '100%' }}>
           <h1>Læringsmateriale i DCST1002</h1>
           <p>Kurs for elever i 5-7 klasse</p>
-          <Outlet /> 
+          <Outlet />
         </div>
       </div>
     </>

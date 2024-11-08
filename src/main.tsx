@@ -66,7 +66,7 @@ const router = createBrowserRouter([
           { path: 'lureri', element: <Lureri /> },
           { path: 'brukernavn', element: <Brukernavn /> },
           { path: 'bilder', element: <Bilder /> },
-          ],
+        ],
       },
       {
         path: '/svindelteknikker',
@@ -75,9 +75,10 @@ const router = createBrowserRouter([
           { path: 'pharming', element: <Pharming /> },
           { path: 'phishing', element: <Phishing /> },
           { path: 'social-engineering', element: <SocialEngineering /> },
-          ],
+        ],
       },
-      { path: '/lenker',
+      {
+        path: '/lenker',
         children: [
           { path: '', element: <Lenker /> },
           { path: 'farlige-lenker', element: <FarligeLenker /> },
@@ -89,7 +90,8 @@ const router = createBrowserRouter([
           { path: 'gratis-lenke', element: <GratisLenker /> },
         ],
       },
-      { path: '/passord', 
+      {
+        path: '/passord',
         children: [
           { path: '', element: <Passord /> },
           { path: 'viktig', element: <PassordViktig /> },
@@ -99,7 +101,8 @@ const router = createBrowserRouter([
           { path: 'tofaktor', element: <ToFaktor /> },
           { path: 'mistet', element: <PassordMistet /> },
           { path: 'trygge', element: <PassordTrygge /> },
-      ] },
+        ]
+      },
     ],
   },
 ]);

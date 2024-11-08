@@ -8,7 +8,7 @@ type VideoContentProps = {
 };
 
 
-const VideoContent: React.FC<VideoContentProps> = ({ videoUrl, title, src_text}) => {
+const VideoContent: React.FC<VideoContentProps> = ({ videoUrl, title, src_text }) => {
   var source = null;
 
   // Inline styles for responsive video container
@@ -33,7 +33,7 @@ const VideoContent: React.FC<VideoContentProps> = ({ videoUrl, title, src_text})
           title={title || 'Embedded video'}
         > </iframe>
       </figure>
-        {source}
+      {source}
     </div>
   );
 };
