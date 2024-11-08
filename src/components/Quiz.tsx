@@ -53,7 +53,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
           }
 
           return (
-            <div key={option.id} className="field">
+            <div key={option.id} className="field" style={{ wordBreak: 'keep-all' }}>
               <input
                 type="radio"
                 id={`option-${option.id}`}
@@ -84,13 +84,15 @@ const Quiz: React.FC<QuizProps> = ({ question, options }) => {
         Svar
       </button>
 
-      {result && (
-        <div className={((result === 'Riktig!') ? "notification is-light is-primary" : "notification is-light is-danger")} style={{ marginTop: '20px' }}>
-          <strong>{result}</strong>
-          {explanation && <div>Forklaring: {explanation}</div>}
-        </div>
-      )}
-    </div>
+      {
+        result && (
+          <div className={((result === 'Riktig!') ? "notification is-light is-primary" : "notification is-light is-danger")} style={{ marginTop: '20px' }}>
+            <strong>{result}</strong>
+            {explanation && <div>Forklaring: {explanation}</div>}
+          </div>
+        )
+      }
+    </div >
   );
 };
 
